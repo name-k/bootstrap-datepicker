@@ -1032,7 +1032,7 @@
           clsName = $.unique(clsName);
         }
 
-        html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + (this.o.dateCells ? ' data-date="'+(prevMonth.getTime().toString())+'"' : '') + '>'+prevMonth.getUTCDate() + '</td>');
+        html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + (this.o.dateCells ? ' data-date="'+(prevMonth.getTime().toString())+'"' : '') + '><span>'+prevMonth.getUTCDate() + '</span></td>');
         tooltip = null;
         if (weekDay === this.o.weekEnd){
           html.push('</tr>');
@@ -1175,7 +1175,7 @@
       }
 
       // Clicked on today button
-      if (target.hasClass('today') && !target.hasClass('day')){
+      if (target.closest('td').hasClass('today') && !target.closest('td').hasClass('day')){
         this.setViewMode(0);
         this._setDate(UTCToday(), this.o.todayBtn === 'linked' ? null : 'view');
       }
@@ -1187,13 +1187,13 @@
 
       if (!target.hasClass('disabled')){
         // Clicked on a day
-        if (target.hasClass('day')){
+        if (target.closest('td').hasClass('day')) {
           day = Number(target.text());
           year = this.viewDate.getUTCFullYear();
           month = this.viewDate.getUTCMonth();
 
-          if (target.hasClass('old') || target.hasClass('new')){
-            dir = target.hasClass('old') ? -1 : 1;
+          if (target.closest('td').hasClass('old') || target.closest('td').hasClass('new')){
+            dir = target.closest('td').hasClass('old') ? -1 : 1;
             month = (month + dir + 12) % 12;
             if ((dir === -1 && month === 11) || (dir === 1 && month === 0)) {
               year += dir;
@@ -1242,7 +1242,7 @@
     // Clicked on prev or next
     navArrowsClick: function(e){
       var target = $(e.target);
-      var dir = target.hasClass('prev') ? -1 : 1;
+      var dir = target.closest('th').hasClass('prev') ? -1 : 1;
       if (this.viewMode !== 0){
         dir *= DPGlobal.viewModes[this.viewMode].navStep * 12;
       }
