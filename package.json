@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      "bootstrap-datepicker@git+https://github.com/eternicode/bootstrap-datepicker.git",
+      "D:\\PJ\\Freelance\\textmagic\\textmagic-3"
+    ]
+  ],
+  "_from": "git+https://github.com/eternicode/bootstrap-datepicker.git",
+  "_id": "bootstrap-datepicker@1.7.0-dev",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/bootstrap-datepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/eternicode/bootstrap-datepicker/master/package.json",
+      "gitUrl": "git://github.com/eternicode/bootstrap-datepicker.git",
+      "httpsUrl": "git+https://github.com/eternicode/bootstrap-datepicker.git",
+      "shortcut": "github:eternicode/bootstrap-datepicker",
+      "ssh": "git@github.com:eternicode/bootstrap-datepicker.git",
+      "sshUrl": "git+ssh://git@github.com/eternicode/bootstrap-datepicker.git",
+      "type": "github"
+    },
+    "name": "bootstrap-datepicker",
+    "raw": "bootstrap-datepicker@git+https://github.com/eternicode/bootstrap-datepicker.git",
+    "rawSpec": "git+https://github.com/eternicode/bootstrap-datepicker.git",
+    "scope": null,
+    "spec": "git+https://github.com/eternicode/bootstrap-datepicker.git",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git+https://github.com/eternicode/bootstrap-datepicker.git#b92ba211ff302d4a4a3436f01201d96d8c96c312",
+  "_shasum": "93ddda4a5549ce6c046f8c0a4108568faa0b71fb",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-datepicker@git+https://github.com/eternicode/bootstrap-datepicker.git",
+  "_where": "D:\\PJ\\Freelance\\textmagic\\textmagic-3",
+  "author": {
+    "email": "eternicode@gmail.com",
+    "name": "Andrew Rowls"
+  },
+  "bugs": {
+    "url": "https://github.com/eternicode/bootstrap-datepicker/issues"
+  },
+  "dependencies": {
+    "jquery": ">=1.7.1 <4.0.0"
+  },
+  "description": "A datepicker for Bootstrap forked from Stefan Petre's (of eyecon.ro), improvements by eternicode",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-banner": "~0.6.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-compress": "~0.13.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-csslint": "~0.3.1",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-less": "~1.3.0",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-jscs": ">=1.1.0, <2.0",
+    "grunt-string-replace": "~1.0.0",
+    "load-grunt-tasks": "~1.0.0",
+    "phantomjs": "~1.9.0",
+    "time-grunt": "~1.0.0"
+  },
+  "files": [
+    "LICENSE",
+    "build",
+    "dist",
+    "js/**/*.js",
+    "less/*.less"
+  ],
+  "gitHead": "b92ba211ff302d4a4a3436f01201d96d8c96c312",
+  "homepage": "https://github.com/eternicode/bootstrap-datepicker",
+  "keywords": [
+    "bootstrap",
+    "datepicker"
+  ],
+  "license": "Apache-2.0",
+  "main": "./dist/js/bootstrap-datepicker.js",
+  "name": "bootstrap-datepicker",
+  "optionalDependencies": {},
+  "readme": "# bootstrap-datepicker\r\n\r\n[![Join the chat at https://gitter.im/eternicode/bootstrap-datepicker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/eternicode/bootstrap-datepicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\r\n\r\nThis is a fork of Stefan Petre's [original code](http://www.eyecon.ro/bootstrap-datepicker/);\r\nthanks go to him for getting this thing started!\r\n\r\nPlease note that this fork is not used on Stefan's page, nor is it maintained or contributed to by him.\r\n\r\nVersions are incremented according to [semver](http://semver.org/).\r\n\r\n## CDN\r\n\r\nYou can use the [CloudFlare](https://www.cloudflare.com) powered [cdnjs.com](https://cdnjs.com) on your website.\r\n\r\n[bootstrap-datepicker](https://cdnjs.com/libraries/bootstrap-datepicker) on cdnjs\r\n\r\nPlease note: It might take a few hours until a new version is available on cdnjs.\r\n\r\n## Links\r\n\r\n* [Online Demo](https://eternicode.github.io/bootstrap-datepicker/)\r\n* [Online Docs](https://bootstrap-datepicker.readthedocs.org/en/stable/) (ReadTheDocs.com)\r\n* [Google Group](https://groups.google.com/group/bootstrap-datepicker/)\r\n* [Travis CI ![Build Status](https://travis-ci.org/eternicode/bootstrap-datepicker.svg?branch=master)](https://travis-ci.org/eternicode/bootstrap-datepicker)\r\n\r\n## Development\r\n\r\nOnce you cloned the repo, you'll need to install [grunt](http://gruntjs.com/) and the development dependencies using [npm](https://www.npmjs.com/).\r\n\r\n    $ [sudo] npm install -g grunt-cli\r\n    $ npm install\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eternicode/bootstrap-datepicker.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "1.7.0-dev"
+}
