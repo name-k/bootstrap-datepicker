@@ -161,6 +161,8 @@
     this.fillMonths();
 
     this._allow_update = true;
+    
+    this.previousPick = null;
 
     this.update();
 
@@ -1167,7 +1169,7 @@
       e.preventDefault();
       e.stopPropagation();
 
-      var target, dir, day, year, month;
+      var target, dir, day, dayRangeStart, dayRangeEnd, year, month;
       target = $(e.target);
 
       if (!this.o.simpleMode && target.hasClass('datepicker-switch') && this.viewMode !== this.o.maxViewMode){
@@ -1188,10 +1190,21 @@
       if (!target.hasClass('disabled')){
         // Clicked on a day
         if (target.closest('td').hasClass('day')) {
+          
+          if(this.o.singleInstanceRangeMode) {
+            if(this.previousPick) {
+              // have to patch render method to fill all the dates
+              this.previousPick = null;
+            }
+            else {
+              // set this.previousPick equeal to $e.target
+            }
+          }
+          
           day = Number(target.text());
           year = this.viewDate.getUTCFullYear();
           month = this.viewDate.getUTCMonth();
-
+          
           if (target.closest('td').hasClass('old') || target.closest('td').hasClass('new')){
             dir = target.closest('td').hasClass('old') ? -1 : 1;
             month = (month + dir + 12) % 12;
@@ -1201,7 +1214,8 @@
             }
             this._trigger('changeMonth', this.viewDate);
           }
-          this._setDate(UTCDate(year, month, day));
+          this._setDate(UTCDate(year, month, day));  
+          
         }
 
         // Clicked on a month, year, decade, century
@@ -1290,6 +1304,8 @@
         this.hide();
       }
     },
+    
+    // _setTwoDates: function(dateStart, dateEnd, which) {},
 
     moveDay: function(date, dir){
       var newDate = new Date(date);
